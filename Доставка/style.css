@@ -1,12 +1,12 @@
 .header {
     /* color: rgb(255, 153, 0); */
-     height: 124px;
-     border: 1px solid rgb(0, 255, 170);
+     min-height: 156px;
+     display: flex;
+     align-items: center;
 }
 
 .header-box
 {
-   border: 1px solid rgb(255, 0, 106);
    height: 100%;
    display: flex;
    align-items: center;
@@ -23,25 +23,59 @@
 
 .footer
 {
-    height: 156px;
-    border: 1px solid rgb(255, 0, 132);
+    min-height: 156px;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
 }
 
 .footer-box 
 {
-   border: 1px solid rgb(136, 0, 255);
    height: 156px;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   gap: 36px;
+   flex-wrap: wrap;
 }
 
-.footer-nav
-{
+.footer-social{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer-nav{
     flex-grow: 1;
 }
 
-.main {}
+
+.footer-nav ul li{
+    color: #595959;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-nav ul 
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.main {
+    flex-grow: 1;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.00) 1.04%, #F5F5F5 100%);
+}
 
 .container{
 height: 100%;
@@ -49,8 +83,116 @@ max-width: 1200px;
 margin: 0px auto;
 padding-left: 15px;
 padding-right: 15px;
+width: 100%;
+}
+
+.btn {
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 4px;
+    outline: none;
+}
+
+.btn-user {
+    border-radius: 2px;
+    background: #1775ce;
+    border: 1px solid #1775ce;
+    color: #fff;
+}
+
+.btn-shop {
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.00);
+  color: #595959;
+}
+
+.header-controls{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+@media (max-width: 991px){
+    .banner-item-title {
+        max-width: 100%;
+    }
+
+    .banner-item-subtitle{
+        max-width: 100%;
+    }
+}
+.banner-item{
+    background-image: url("img/banner.jpg");
+    background-repeat: no-repeat;
+    /*background-size: 100%; */
+    background-size: cover;
+    background-position: center right;
+    padding: 68px;
+    border-radius: 10px;
+}
+
+.banner-item-title{
+    color: #302c34;
+  font-weight: 700;
+  font-size: 39px;
+  max-width: 50%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.banner-item-subtitle{
+    color: #302c34;
+  font-weight: 400;
+  font-size: 24px;
+  max-width: 50%;
+  margin: 0;
+}
+
+.banner{
+    margin-bottom: 56px;
+}
+
+.products-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-header-title{
+    /*Рестораны */
+    font-weight: 700;
+    font-size: 36px;
+    color: #000000;
+}
+
+.products-header-search{
+    /* Поиск блюд и ресторанов*/
+    border-radius: 2px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    height: 34px;
+    min-width: 306px;
+    flex-shrink: 0;
+    padding: 5px 12px;
+}
+
+.products-header-search:focus{
+    outline: none;
+    border: 1px solid #d9d9d9;
+}
+
+.products-header-search::placeholder{
+    color: #BFBFBF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 *{
     box-sizing: border-box;
+    font-family: Roboto;
 }
